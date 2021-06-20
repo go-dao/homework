@@ -1,0 +1,18 @@
+trace:
+  endpoint: http://127.0.0.1:14268/api/traces
+server:
+  http:
+    addr: 0.0.0.0:18000
+    timeout: 1s
+  grpc:
+    addr: 0.0.0.0:19000
+    timeout: 1s
+data:
+  database:
+    driver: mysql
+    source: root:123456@tcp(192.168.3.111:32775)/testdb?parseTime=True
+  redis:
+    addr: 192.168.3.111:32776
+    dial_timeout: 1s
+    read_timeout: 0.4s
+    write_timeout: 0.6s
